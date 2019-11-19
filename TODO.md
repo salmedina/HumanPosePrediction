@@ -9,8 +9,8 @@
     - x_end
     - y_start
     - y_end
--[ ] Sample 100k samples
--[ ] Get statistics of 100k samples
+-[X] Sample 100k samples
+-[X] Get statistics of 100k samples
 -[ ] Build dataloader
 -[ ] Train model
 -[ ] Fine-tune hyperparams
