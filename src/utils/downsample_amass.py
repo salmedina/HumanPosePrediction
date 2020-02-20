@@ -19,6 +19,10 @@ def main(dataset_dir, output_dir, target_framerate):
         relative_path = osp.relpath(npz_path, dataset_dir)
         save_path = osp.join(output_dir, relative_path)
         save_dir = osp.dirname(save_path)
+        if 'mocap_framerate' not in data:
+            print(f'No mocap framerate: {relative_path}')
+            continue
+
         if data.mocap_framerate < target_framerate:
             print(f'Cannot downsample [{data.mocap_framerate}]: {relative_path}')
             continue

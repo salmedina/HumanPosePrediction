@@ -8,8 +8,8 @@ def main(input_path, x_frames, y_frames, output_path):
     output_list = list()
     for idx, row in data.iterrows():
         num_motion_frames = row['frames']
-        for x_start in range(0, num_motion_frames, 25):
-            x_end = x_start + x_frames - 1
+        for x_start in range(0, num_motion_frames, 150):
+            x_end = x_start + x_frames
             y_start = x_start + x_frames
             y_end = y_start + y_frames
             if y_end < num_motion_frames:
